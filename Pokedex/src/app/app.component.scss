@@ -1,0 +1,30 @@
+.header {
+    text-align: center;
+    width: 30%;
+    margin: 0 auto 20px auto;
+    border: 2px solid black;
+}
+
+.pokemon {
+    &::after {
+        content: "";
+        display: block;
+        clear: both;
+    }
+
+    &__list{
+        float: left;
+        width: 70%;
+        background-color: red;
+    }
+    
+    &__details {
+        float: left;
+        width: 30%;
+        background-color: green;
+    
+    }
+}
+
+
+
