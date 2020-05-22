@@ -6,6 +6,7 @@
 }
 
 .pokemon {
+
     &::after {
         content: "";
         display: block;
@@ -15,16 +16,28 @@
     &__list{
         float: left;
         width: 70%;
-        background-color: red;
+        padding-top: 1.3rem;
     }
     
     &__details {
         float: left;
         width: 30%;
-        background-color: green;
-    
+        padding-top: 1.3rem;    
+        padding-right: 1.3rem;
     }
 }
 
+@media only screen and (max-width: 670px) {
+    .pokemon {
+
+        &__list{
+            width:60%;
+        }
+        
+        &__details {
+            width: 40%;
+        }
+    }
+}
 
 

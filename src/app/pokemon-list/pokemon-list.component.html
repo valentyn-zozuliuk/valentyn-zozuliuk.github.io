@@ -1,5 +1,24 @@
-<div class="pokemon__item">
-    <img src="/" alt="/" class="pokemon__image">
-    <h3 class="pokemon__name">fdadfsf</h3>
-    <div class="pokemon__type">dfdffdf</div>
+<div *ngIf="loadedList" class="filter">
+    <label for="pokemons">Filter by type:   </label>
+
+    <select id="pokemons" (change)="changeTypeFilter($event)" #pokemon>
+        <option value="none">none</option>
+        <option *ngFor="let type of pokemonTypes" [value]="type"> {{ type }} </option>
+    </select>
+
 </div>
+
+
+<div *ngFor="let pokemon of pokemonList" class="pokemon__item" (click)="openDetails(pokemon)">
+    <img [src]="pokemon.image" alt="/" class="pokemon__image">
+    <h3 class="pokemon__name">{{pokemon.name}}</h3>
+    <div class="pokemon__type" *ngFor="let type of pokemon.types" 
+        class="pokemon__type" 
+        [ngStyle]="{'background-color': checkTypes(type.type.name)}">
+        {{type.type.name}}
+    </div>
+</div>
+
+<div *ngIf="!loadedList" class="loader"></div>
+
+<div *ngIf="loadedList" class="load-more" (click)="loadMore()">Load More</div>

@@ -1,0 +1,32 @@
+.pokemon {
+    &__detail {
+
+        padding:1rem;
+        margin-top: 40px;
+        width: 90%;
+        margin-left: auto;
+        
+        border: 2px solid black;
+
+        img {
+            height: auto;
+            width: 100%;
+    
+            border: 2px solid grey;
+        }
+    }
+
+    &__details {
+        width: 100%;
+
+        text-align: center;
+        border: 2px solid black;
+        td {
+            border: 2px solid black;
+        }
+    }
+}
+
+h2 {
+    text-align: center;
+}

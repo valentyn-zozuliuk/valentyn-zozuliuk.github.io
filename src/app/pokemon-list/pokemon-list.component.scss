@@ -1,3 +1,123 @@
-.pokemon__item{
+.pokemon {
+
+    &__item {
+        display: inline-block;
+        vertical-align: top;
+        width: 30%;
+        padding:1rem;
+        margin-left: 1.3rem;
+        margin-bottom: 1.3rem;
+
+        text-align: center;
+        border: 2px solid black;
+
+        img {
+            height: auto;
+            width: 100%;
     
+            border: 2px solid grey;
+        }
+    }
+
+    &__type {
+        display: inline-block;
+        padding: 10px;
+        margin-bottom: 1rem;
+        border-radius: 5px;
+    }
+
+    &__type:not(:last-child) {
+        margin-right: 5px;
+    }
+
+
+}
+
+.filter {
+    // display: inline-block;
+   text-align: start;
+   padding: 10px 10px 10px 20px;
+}
+
+button {
+    margin-left: 10px;
+    background: red;
+    color: white;
+    border-radius: 5px;
+}
+
+.load-more {
+
+    margin: 0 auto;
+    width: 70%;
+    min-width: 300px;
+    max-width: 600px;
+
+    padding: 15px;
+    text-align: center;
+
+    background-color: dodgerblue;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+
+.loader {
+    border: 16px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 16px solid #3498db;
+    width: 120px;
+    height: 120px;
+    -webkit-animation: spin 2s linear infinite; /* Safari */
+    animation: spin 2s linear infinite;
+    margin: 2rem auto;
+}
+  
+@-webkit-keyframes spin {
+0% { -webkit-transform: rotate(0deg); }
+100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+0% { transform: rotate(0deg); }
+100% { transform: rotate(360deg); }
+}
+
+
+@media only screen and (max-width: 670px) {
+    .pokemon {
+
+        &__item {
+            min-height: 280px;
+            width: 40%;
+        }
+
+        &__type {
+            display: block;
+            padding: 5px;
+            margin-bottom: 0rem;
+            border-radius: 5px;
+        }
+
+        &__type:not(:last-child) {
+            margin-right: 0px;
+            margin-bottom: 5px;
+        }
+
+
+    }
+
+}
+
+@media only screen and (max-width: 570px) {
+    .pokemon {
+
+        &__item {
+            min-height: 240px;
+        }
+
+    
+    }
+
 }

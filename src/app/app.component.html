@@ -4,10 +4,10 @@
 
 <div class="pokemon">
   <div class="pokemon__list">
-    <app-pokemon-list></app-pokemon-list>
+    <app-pokemon-list (clickedSmth)="showDetails($event)"></app-pokemon-list>
   </div>
   
   <div class="pokemon__details">
-    <app-pokemon-details></app-pokemon-details>
+    <app-pokemon-details [pokemon]="pokemon" *ngIf="getDetails()"></app-pokemon-details>
   </div>
 </div>

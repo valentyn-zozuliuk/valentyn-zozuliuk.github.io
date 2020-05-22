@@ -5,18 +5,39 @@ import { Injectable } from '@angular/core';
 })
 export class DataReceiverService {
 
+  private chunkUrl: string = 'https://pokeapi.co/api/v2/pokemon?limit=12&offset=';
+  private offsetNumber: number = 0;
+
   constructor() { }
 
-  async getPokemonChunk() {
+  async getPokemonChunk() : Promise<any> {
 
-    let responce = await fetch('http://pokeapi.co/api/v1/pokemon/?limit=12', {
-      
-    });
+    let responce = await fetch(this.chunkUrl + this.offsetNumber);
+    let data = await responce.json();
 
-    // let data = await responce.json();
-
-    return responce;
-    
+    return data;
   }
+  
+
+  async getSinglePokemon(url) : Promise<any> {
+  
+    let responce = await fetch(url);
+    let data = await responce.json();
+
+    return data;
+  }
+
+  async getPossibleTypes() : Promise<any> {
+
+    let responce = await fetch('https://pokeapi.co/api/v2/type?limit=999');
+    let data = await responce.json();
+
+    return data;
+  }
+
+  updateOffsetNumber(): void {
+    this.offsetNumber += 12;
+  }
+
 
 }

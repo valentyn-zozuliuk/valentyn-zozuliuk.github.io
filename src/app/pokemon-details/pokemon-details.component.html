@@ -1,1 +1,43 @@
-<p>pokemon-details works!</p>
+<div class="pokemon__detail" *ngIf="pokemon">
+    <img [src]="pokemon.image" alt="/" class="pokemon__image">
+    <h2 class="pokemon__name">{{ pokemon.name }}</h2>
+    <table class="pokemon__details">
+        <tr>
+            <td>Type</td>
+            <td>{{pokemon.info.types[0].type.name}} {{pokemon.info.types[1] ? ', ' + pokemon.info.types[1].type.name : ''}}</td>
+        </tr>
+        <tr>
+            <td>Attack</td>
+            <td>{{pokemon.info.attack}}</td>
+        </tr>
+        <tr>
+            <td>Defense</td>
+            <td>{{pokemon.info.defense}}</td>
+        </tr>
+        <tr>
+            <td>HP</td>
+            <td>{{pokemon.info.hp}}</td>
+        </tr>
+        <tr>
+            <td>SP Attack</td>
+            <td>{{pokemon.info.spAttack}}</td>
+        </tr>
+        <tr>
+            <td>SP Defense</td>
+            <td>{{pokemon.info.spDefense}}</td>
+        </tr>
+        <tr>
+            <td>Speed</td>
+            <td>{{pokemon.info.speed}}</td>
+        </tr>
+        <tr>
+            <td>Weight</td>
+            <td>{{pokemon.info.weight}}</td>
+        </tr>
+        <tr>
+            <td>Total Moves</td>
+            <td>{{pokemon.info.totalMoves}}</td>
+        </tr>
+    </table> 
+        
+</div>
