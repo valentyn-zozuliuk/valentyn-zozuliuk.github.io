@@ -121,3 +121,34 @@ button {
     }
 
 }
+
+@media only screen and (max-width: 470px) {
+    .pokemon {
+
+        &__item {
+            min-height: 280px;
+            width: 70%;
+            display: block;
+            margin: 10px auto;
+        }
+
+        &__type {
+            display: block;
+            padding: 5px;
+            margin-bottom: 0rem;
+            border-radius: 5px;
+        }
+
+        &__type:not(:last-child) {
+            margin-right: 0px;
+            margin-bottom: 5px;
+        }
+
+
+    }
+
+    .filter {
+       text-align: center;
+    }
+
+}

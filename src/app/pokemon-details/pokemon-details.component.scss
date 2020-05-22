@@ -2,7 +2,7 @@
     &__detail {
 
         padding:1rem;
-        margin-top: 40px;
+        // margin-top: 40px;
         width: 90%;
         margin-left: auto;
         
@@ -29,4 +29,28 @@
 
 h2 {
     text-align: center;
+}
+
+
+@media only screen and (max-width: 470px) {
+    .pokemon {
+
+        &__detail {
+
+            padding:1rem;
+            margin-top: 40px;
+            width: 95%;
+            margin-left: 0;
+            margin-right: auto;
+            
+            border: 2px solid black;
+    
+            img {
+                height: auto;
+                width: 100%;
+        
+                border: 2px solid grey;
+            }
+        }
+    }
 }

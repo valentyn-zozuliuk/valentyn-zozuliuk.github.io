@@ -22,8 +22,17 @@
     &__details {
         float: left;
         width: 30%;
-        padding-top: 1.3rem;    
+        padding-top: 59px;    
         padding-right: 1.3rem;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .pokemon {
+
+        &__details {
+            padding-top: 52px;    
+        }
     }
 }
 
@@ -38,6 +47,25 @@
             width: 40%;
         }
     }
+}
+
+@media only screen and (max-width: 470px) {
+    .pokemon {
+
+        &__list{
+            width:50%;
+        }
+        
+        &__details {
+            width: 50%;
+            padding-top: 1.8rem;
+        }
+    }
+
+    .header {
+        width: 50%;
+    }
+
 }
 
 
